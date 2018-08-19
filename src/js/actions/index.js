@@ -1,4 +1,4 @@
-import  { ADD_TODO,MARK_COMPLETE_TODO } from '../constants/action-types';
+import  { ADD_TODO,MARK_COMPLETE_TODO,DELETE_TODO } from '../constants/action-types';
 
 export const addTodo = (todo) =>(
     {

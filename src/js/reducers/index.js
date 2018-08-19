@@ -1,5 +1,5 @@
 import {ADD_TODO} from '../constants/action-types';
-import {MARK_COMPLETE_TODO} from '../constants/action-types';
+import {MARK_COMPLETE_TODO,DELETE_TODO} from '../constants/action-types';
 
 const initialState = {
     todos:[]
@@ -17,12 +17,10 @@ const rootReducer = (state = initialState,action) =>{
                 break;
 
         case MARK_COMPLETE_TODO:
-                console.log("Still working");
                 return{
                     ...state,
                     todos : state.todos.map(function(todo){
                             if(todo.id == action.payload){
-                                console.log("got the todo");
                                 var newTodo = {...todo,status:'DONE'}
                                 return newTodo;
                             }
@@ -31,7 +29,20 @@ const rootReducer = (state = initialState,action) =>{
                             }
                     })
                 }
-                console.log("marked as done");
+                break;
+
+        case DELETE_TODO :            
+                return{
+                    ...state,
+                    todos : state.todos.filter(function(todo){
+                            if(todo.id == action.payload){
+                                return false;
+                            }
+                            else{
+                                return true;
+                            }
+                    })
+                }
                 break;
 
         default: return state;

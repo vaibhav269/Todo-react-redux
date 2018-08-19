@@ -32,6 +32,7 @@ class ConnectedTodo extends Component{
     constructor(){
         super();
         this.markDone = this.markDone.bind(this);
+        this.delete = this.delete.bind(this);
     }
 
     markDone(){
@@ -40,7 +41,10 @@ class ConnectedTodo extends Component{
         this.props.todoMarkComplete(todo.id);
     }
 
-    delete(){                
+    delete(){
+        let { todo } = this.props;
+        console.log("deleting the todo ",todo.id);
+        this.props.todoDelete(todo.id);        
     }
 
     render(){
