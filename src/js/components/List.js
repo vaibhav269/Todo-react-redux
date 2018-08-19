@@ -9,17 +9,19 @@ const mapStateToProps = (state)=>{
 class ConnectedList extends Component{
     constructor(){
         super();
-}
+    }
 
     render(){
         return(
-            <div>
-                <ul className="list-unstyled">
+            <div className="w-100">
+                <ul className="list-group">
                     {                        
                         this.props.todos.map(function(todo){
                             return(
-                                <li id={todo.id}>
-                                    {todo.todoName}
+                                <li 
+                                    className="w-100 list-group-item p-2"
+                                    id={todo.id} >                                
+                                        {todo.todoName}                                
                                 </li>
                             )
                         })                        

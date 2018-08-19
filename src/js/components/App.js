@@ -4,8 +4,22 @@ import List from '../components/List';
 
 const App = ()=>(
     <div>
-        <Form />
-        <List />
+        <div className="container">        
+            <div className="row mt-5 justify-content-center">
+                <h1>Welcome to the initial phase of todo application</h1>    
+            </div>
+            <div className="row mt-1 justify-content-center">                
+                <div className="col-5">                 
+                    <div className="row mt-5">                        
+                        <Form/>                        
+                    </div>
+
+                    <div className="row mt-2">
+                        <List />
+                    </div>                
+                </div>
+            </div>
+        </div>
     </div>
 );
 

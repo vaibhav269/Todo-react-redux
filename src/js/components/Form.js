@@ -26,14 +26,17 @@ class ConnectedForm extends Component{
 
     render(){
         return(
-            <div>
-                <form 
+            <div className="w-100">
+                <form
+                    className="text-center"                               
                     onSubmit = {this.addTodo}>                
                     <input 
+                        className="w-100 bg-primary border-0 text-white p-2 mb-2 rounded"
                         ref="todoName" 
                         type="text"
                         />
                     <button 
+                        className = "btn btn-success"
                         type = "submit">
                         Add Todo
                     </button>
