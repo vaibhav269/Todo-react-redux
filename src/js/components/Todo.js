@@ -49,10 +49,28 @@ class ConnectedTodo extends Component{
 
     render(){
         var {todo} = this.props;
+
+        function todoName(){
+            if(todo.status == 'DONE'){
+                return(
+                    <div className="text-primary">
+                        {todo.todoName}
+                    </div>
+                )
+            }
+            else{
+                return(
+                    <div >
+                        {todo.todoName}
+                    </div>
+                )
+            }
+        }
+
         return(
             <div className = "list-group-item p-2" >
-                <div style={ widthNinety } className="w- d-inline-block">
-                    {todo.todoName}                
+                <div style={ widthNinety } className="w- d-inline-block">                    
+                    {todoName()}                
                 </div>
 
                 <div style = { {...cursorPointer,...widthFive} } className = "d-inline-block" onClick = {this.markDone}>
@@ -65,6 +83,7 @@ class ConnectedTodo extends Component{
             </div>
         )
     }
+    
 }
 
 const Todo = connect(null,mapDispatchToProps)(ConnectedTodo);
