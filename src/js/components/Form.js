@@ -18,8 +18,8 @@ class ConnectedForm extends Component{
     addTodo(event){
         event.preventDefault();
         let todoName = this.refs.todoName.value;
-        let id = 1;
-        let status = false;        
+        let id = new Date().getTime();  //generating unique id NOTE:SHOULD BE REPLACED WITH PRIMARY KEY ON CONNECTING WITH DATABASE
+        let status = 'NOT_DONE';        
         this.props.addTodo({id,todoName,status});
         this.refs.todoName.value = "";
     }

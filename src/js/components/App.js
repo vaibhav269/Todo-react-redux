@@ -9,8 +9,8 @@ const App = ()=>(
                 <h1>Welcome to the initial phase of todo application</h1>    
             </div>
             <div className="row mt-1 justify-content-center">                
-                <div className="col-5">                 
-                    <div className="row mt-5">                        
+                <div className="col-sm-12 col-md-5">                 
+                    <div className="row mt-5">
                         <Form/>                        
                     </div>
 

@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
+import Todo from '../components/Todo';
 
 const mapStateToProps = (state)=>{
     return{
@@ -18,11 +19,7 @@ class ConnectedList extends Component{
                     {                        
                         this.props.todos.map(function(todo){
                             return(
-                                <li 
-                                    className="w-100 list-group-item p-2"
-                                    id={todo.id} >                                
-                                        {todo.todoName}                                
-                                </li>
+                               <Todo todo={todo} key={todo.id}/>
                             )
                         })                        
                     }
