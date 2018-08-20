@@ -31,12 +31,14 @@ class ConnectedForm extends Component{
                     className="text-center"                               
                     onSubmit = {this.addTodo}>                
                     <input 
+                        style = {{ fontSize : '150%' }}
                         className="w-100 bg-primary border-0 text-white p-2 mb-2 rounded"
                         ref="todoName" 
                         type="text"
                         />
                     <button 
-                        className = "w-50 btn btn-success"
+                        style = {{ fontSize : '150%',cursor : 'pointer' }}
+                        className = "w-50 btn btn-success mt-2"
                         type = "submit">
                         Add Todo
                     </button>

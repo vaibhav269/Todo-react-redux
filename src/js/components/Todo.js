@@ -53,8 +53,8 @@ class ConnectedTodo extends Component{
         function todoName(){
             if(todo.status == 'DONE'){
                 return(
-                    <div className="text-primary">
-                        {todo.todoName}
+                    <div className="text-secondary">
+                        <del>{todo.todoName}</del>
                     </div>
                 )
             }
@@ -68,7 +68,7 @@ class ConnectedTodo extends Component{
         }
 
         return(
-            <div className = "list-group-item p-2" >
+            <div style={{ fontSize:'150%'}} className = "list-group-item p-2" >
                 <div style={ widthNinety } className="w- d-inline-block">                    
                     {todoName()}                
                 </div>
