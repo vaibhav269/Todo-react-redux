@@ -36,7 +36,7 @@ class ConnectedForm extends Component{
                         type="text"
                         />
                     <button 
-                        className = "btn btn-success"
+                        className = "w-50 btn btn-success"
                         type = "submit">
                         Add Todo
                     </button>
