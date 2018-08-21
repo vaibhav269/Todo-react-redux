@@ -15,7 +15,7 @@ class ConnectedList extends Component{
     render(){
         return(
             <div className="w-100">
-                <ul className="list-group w-75" style={{margin:'auto'}}>
+                <ul className="list-group w-100" style={{margin:'auto'}}>
                     {                        
                         this.props.todos.map(function(todo){
                             return(

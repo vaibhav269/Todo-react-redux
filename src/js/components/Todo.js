@@ -62,19 +62,20 @@ class ConnectedTodo extends Component{
         }
 
         return(
-            <div style={{ fontSize:'150%'}} className = "list-group-item p-2 pr-3" >
-                
-                <div style = { {...cursorPointer,width:'7%'} } className = "d-inline-block" onClick = {this.markDone}>
-                    <img src = { check } height='40'/>
-                </div>
-                
-                <div style={ {width:'86%'} } className="d-inline-block pl-3">                    
-                    {todoName()}                
-                </div>                
+            <div className="w-100">
+                <div className="text-center d-block">
+                    <div style = { {...cursorPointer,maxWidth:'10%'} } className = "d-inline-block m-2" onClick = {this.markDone}>
+                            <img className = "d-inline-block" src = { check } height='40'/>
+                    </div>
 
-                <div style = { {...cursorPointer,width:'7%'} } className = "d-inline-block" onClick = {this.delete}>
-                    <img src = { dustbin } height='40'/>
-                </div>
+                    <div style={{ fontSize:'150%',width:'70%'}} className = "d-inline-block list-group-item p-2" >
+                            {todoName()}                
+                    </div>
+                    
+                    <div style = { {...cursorPointer,maxwidth:'10%'} } className = "d-inline-block m-2" onClick = {this.delete}>
+                            <img className = "d-inline-block" src = { dustbin } height='40'/>
+                    </div>
+                </div>    
             </div>
         )
     }
