@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../actions/index';
+import '../../css/Form.css';
 
 const mapDispatchToProps = (dispatch) => {
     return{
@@ -33,9 +34,11 @@ class ConnectedForm extends Component{
                     <label>Enter Todos here </label>
                     <input 
                         style = {{ color: '#fff', fontSize : '150%', backgroundColor : '#ee6352' }}
-                        className="w-100 border-0 text-white p-2 mb-2 rounded"
-                        ref="todoName" 
-                        type="text"
+                        className = "w-100 border-0 text-white p-2 mb-2 rounded"
+                        ref = "todoName" 
+                        type = "text"
+                        placeholder = "Going for Walk . . . "
+                        autoFocus
                         />
                     <button 
                         style = {{ fontSize : '150%',cursor : 'pointer' }}

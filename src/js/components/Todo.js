@@ -1,21 +1,15 @@
 import React,{ Component } from 'react';
 import { connect } from 'react-redux';
 import { todoMarkComplete,todoDelete } from '../actions/index';
-
-
+import homeicon from '../../assets/images/home.png';
+import dustbin from '../../assets/images/dustbin.png'
+import check from '../../assets/images/check5.png';
 //Styles
 //--------------------------------------------------------------------
-const widthFive = {
-    width:'5%'    
-}
-
-const widthNinety = {
-    width:'90%'    
-}
-
 const cursorPointer = {
     cursor:'pointer'
 }
+
 
 
 //code
@@ -68,17 +62,18 @@ class ConnectedTodo extends Component{
         }
 
         return(
-            <div style={{ fontSize:'150%'}} className = "list-group-item p-2" >
-                <div style={ widthNinety } className="w- d-inline-block">                    
+            <div style={{ fontSize:'150%'}} className = "list-group-item p-2 pr-3" >
+                
+                <div style = { {...cursorPointer,width:'7%'} } className = "d-inline-block" onClick = {this.markDone}>
+                    <img src = { check } height='40'/>
+                </div>
+                
+                <div style={ {width:'86%'} } className="d-inline-block pl-3">                    
                     {todoName()}                
-                </div>
+                </div>                
 
-                <div style = { {...cursorPointer,...widthFive} } className = "d-inline-block" onClick = {this.markDone}>
-                ✔
-                </div>
-
-                <div style = { {...cursorPointer,...widthFive} } className = "d-inline-block" onClick = {this.delete}>
-                ✖
+                <div style = { {...cursorPointer,width:'7%'} } className = "d-inline-block" onClick = {this.delete}>
+                    <img src = { dustbin } height='40'/>
                 </div>
             </div>
         )
