@@ -23,22 +23,23 @@ class ConnectedForm extends Component{
         this.props.addTodo({id,todoName,status});
         this.refs.todoName.value = "";
     }
-
+    
     render(){
         return(
             <div className="w-100">
                 <form
                     className="text-center"                               
                     onSubmit = {this.addTodo}>                
+                    <label>Enter Todos here </label>
                     <input 
-                        style = {{ fontSize : '150%' }}
-                        className="w-100 bg-primary border-0 text-white p-2 mb-2 rounded"
+                        style = {{ color: '#fff', fontSize : '150%', backgroundColor : '#ee6352' }}
+                        className="w-100 border-0 text-white p-2 mb-2 rounded"
                         ref="todoName" 
                         type="text"
                         />
                     <button 
                         style = {{ fontSize : '150%',cursor : 'pointer' }}
-                        className = "w-50 btn btn-success mt-2"
+                        className = "w-50 btn btn-dark mt-2"
                         type = "submit">
                         Add Todo
                     </button>

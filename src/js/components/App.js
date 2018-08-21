@@ -11,24 +11,12 @@ const breakpoints = {
 
 
 class App extends Component{
-    render(){
-        function responsiveHeading(){            
-                if (window.innerWidth > breakpoints.tablet) {
-                    return (
-                            <h1 className="display-2 mt-5 text-center">WELCOME TO TODO APPLICATION</h1> 
-                        )   
-                  }            
-            else {
-                return (
-                    <h1 style ={ {backgroundColor : '#ee6352'}} className="display-4 text-center text-white w-100"><strong>TODOS</strong></h1> 
-                )
-            }
-        }
+    render(){        
         return(
             <div>
                 <div className="container-fluid">
                     <div className="row justify-content-center">        
-                        { responsiveHeading() }   
+                        <h1 className="bg-dark text-center p-2 text-white w-100"><strong>TODOS</strong></h1> 
                     </div>
                 <div className="row mt-5 justify-content-center">                
                     <div className="col-sm-12 col-lg-7">
