@@ -33,11 +33,11 @@ class ConnectedForm extends Component{
                     onSubmit = {this.addTodo}>                
                     <label>Enter Todos here </label>
                     <input 
-                        style = {{ color: '#fff', fontSize : '150%', backgroundColor : '#ee6352' }}
+                        style = {{ color: '#fff', fontSize : '150%', backgroundColor : '#ee6352',outline:'none' }}
                         className = "w-100 border-0 text-white p-2 mb-2 rounded"
                         ref = "todoName" 
                         type = "text"
-                        placeholder = "Going for Walk . . . "
+                        placeholder = "Enter todo here . . . "
                         autoFocus
                         />
                     <button 
