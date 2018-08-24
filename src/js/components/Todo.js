@@ -63,7 +63,7 @@ class ConnectedTodo extends Component{
 
         return(
             <div className="w-100">
-                <div style={ {verticalAlign:'middle'} } className="text-center d-block">
+                <div className="text-center d-block">
 
                     <div style = { {...cursorPointer,maxWidth:'10%',verticalAlign:'middle'} } className = "d-inline-block m-2" onClick = {this.markDone}>
                             <img className = "d-inline-block" src = { check } height='40'/>
